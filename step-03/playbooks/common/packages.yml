@@ -1,0 +1,16 @@
+---
+- name: 基本的なパッケージをインストール
+  apt: pkg={{ item }} state=latest update_cache=yes
+  tags:
+    - packages
+  with_items:
+    - build-essential
+    - libsqlite3-dev
+    - libreadline6-dev
+    - libgdbm-dev
+    - zlib1g-dev
+    - libbz2-dev
+    - sqlite3
+    - tk-dev
+    - zip
+    - git

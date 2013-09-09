@@ -1,0 +1,5 @@
+---
+- name: 基本的なパッケージをインストール
+  apt: pkg=${packages} state=latest update_cache=yes
+  tags:
+    - packages

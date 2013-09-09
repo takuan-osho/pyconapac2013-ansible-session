@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: True
+
+  tasks:
+    - include: common/packages.yml tags=packages
+    - include: webservers/apache.yml tags=apache

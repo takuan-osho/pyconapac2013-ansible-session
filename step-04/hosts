@@ -1,0 +1,8 @@
+[production]
+192.168.33.52 ansible_ssh_user=vagrant ansible_ssh_port=22
+
+[staging]
+192.168.33.51 ansible_ssh_user=vagrant ansible_ssh_port=22
+
+[local]
+192.168.33.50 ansible_ssh_user=vagrant ansible_ssh_port=22

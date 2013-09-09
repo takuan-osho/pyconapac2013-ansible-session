@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: True
+
+  tasks:
+    - include: common/packages.yml tags=packages
+    - include: dbservers/mysql.yml tags=mysql

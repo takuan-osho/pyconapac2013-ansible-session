@@ -1,0 +1,10 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: True
+  vars_files:
+    - vars/external_vars.yml
+  tasks:
+    - include: packages.yml tags=packages
+    - include: apache.yml tags=apache
+    - include: mysql.yml tags=mysql
