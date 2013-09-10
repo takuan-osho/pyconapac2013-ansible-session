@@ -2,5 +2,5 @@
 - name: MySQLのインストール
   apt: pkg=mysql-server-5.5 state=present update_cache=yes
 
-- name: MySQLが動いているか確認
+- name: MySQLを起動
   service: name=mysql state=started

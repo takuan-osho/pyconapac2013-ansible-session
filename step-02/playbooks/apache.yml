@@ -2,5 +2,5 @@
 - name: apacheのインストール
   apt: pkg=apache2 state=latest update_cache=yes
 
-- name: apacheが動いているか確認
+- name: apacheを起動
   service: name=apache2 state=started
