@@ -7,8 +7,7 @@
 
   - name: 基本的なパッケージをインストール
     apt: pkg={{ item }} state=latest update_cache=yes
-    tags:
-    - packages
+    tags: packages
     with_items:
     - build-essential
     - libsqlite3-dev
@@ -23,20 +22,16 @@
 
   - name: apacheのインストール
     apt: pkg=apache2 state=latest update_cache=yes
-    tags:
-    - apache
+    tags: apache
 
   - name: apacheを起動
     service: name=apache2 state=started
-    tags:
-    - apache
+    tags: apache
 
   - name: MySQLのインストール
     apt: pkg=mysql-server-5.5 state=present update_cache=yes
-    tags:
-    - mysql
+    tags: mysql
 
   - name: MySQLを起動
     service: name=mysql state=started
-    tags:
-    - mysql
+    tags: mysql
