@@ -2,5 +2,3 @@
 - name: 基本的なパッケージをインストール
   apt: pkg={{ item }} state=latest update_cache=yes
   with_items: packages
-  tags:
-    - packages
